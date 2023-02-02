@@ -1,25 +1,24 @@
-from jeson_file import result
-# import datetime
-#
-#
-# class Event:
-#
-#     def __init__(self, title="", date=datetime.datetime.now()):
-#         self.title = title
-#         self.date = date
-#
-#     def __repr__(self):
-#         return f"Event({self.date}, {self.title}"
-#
-#
-# events = [
-#     Event(title="Событие 1", date=datetime.datetime(2019, 4, 3)),
-#     Event(title="Событие 2", date=datetime.datetime(2022, 4, 3)),
-#     Event(title="Событие 3", date=datetime.datetime(2020, 4, 3)),
-#     Event(title="Событие 3", date=datetime.datetime(2018, 4, 3)),
-# ]
-#
-# events.sort(key=lambda event: event.date)
-#
-# print(events)
+from fun import *
+
+
+def work_proj():
+    for item in last_five():
+        print(data_time(item["date"]), organization_transfer(item['description']))
+        print(f'{number_cart_send(item["from"])} -> {number_cart_recipient(item["to"])}')
+        print(item["operationAmount"]["amount"], item["operationAmount"]["currency"]["name"])
+        print()
+
+work_proj()
+
+
+
+
+
+
+
+
+
+
+
+
 

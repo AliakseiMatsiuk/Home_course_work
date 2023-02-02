@@ -1,5 +1,5 @@
 import requests as requests
-from pprint import pprint
+
 
 URL = "https://www.jsonkeeper.com/b/0MZI"
 
