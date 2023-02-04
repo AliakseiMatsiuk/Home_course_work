@@ -1,5 +1,4 @@
 # Импортируем словарь
-from pprint import pprint
 import requests as requests
 
 URL = "https://www.jsonkeeper.com/b/0MZI"
