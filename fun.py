@@ -1,9 +1,15 @@
 # Импортируем словарь
-from jeson_file import result
+from pprint import pprint
+import requests as requests
+
+URL = "https://www.jsonkeeper.com/b/0MZI"
+
+result = requests.get(URL).json()
+
 
 def if_EXECUTED():
     """
-    Сортируем все транзакции по Выполненым или Невыполненым
+    Сортируем все транзакции по Выполненым
     :return: Возврощает отсортированый список
     """
     exc = []
@@ -17,6 +23,7 @@ def if_EXECUTED():
     return exc
 
 
+
 def last_five():
     """
     Из сортировоного списа берем пять последних по дате
@@ -25,7 +32,6 @@ def last_five():
     new = if_EXECUTED()[::-1]
     lis_new = sorted(new[:5], key=lambda data: data["date"])
     return lis_new[::-1]
-
 
 def data_time(data):
     """
