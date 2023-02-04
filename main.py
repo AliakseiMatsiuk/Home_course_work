@@ -1,5 +1,6 @@
 from fun import *
 
+
 def work_proj():
     """
     Рабочий поекст которы принемает тразакции и
@@ -14,6 +15,7 @@ def work_proj():
         print(f'{number_cart_send(item["from"])} -> {number_cart_recipient(item["to"])}')
         print(item["operationAmount"]["amount"], item["operationAmount"]["currency"]["name"])
         print()
+
 
 work_proj()
 
